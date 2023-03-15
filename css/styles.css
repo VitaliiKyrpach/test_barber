@@ -1,0 +1,125 @@
+/* primary text color #555555
+  econdary text color #303030
+  add pri text color #9DA4BD
+  add sec text color rgba(157, 164, 189, 0.6)
+  accent text color #FF6C00 */
+:root {
+  --primary-text-color: #555555;
+  --secondary-text-color: #303030;
+  --addpri-text-color: #9da4bd;
+  --addsec-text-color: rgba(157, 164, 189, 0.6);
+  --accent-text-color: #ff6c00;
+  --addaccent-text-color: #ffffff;
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.button {
+  color: var(--addaccent-text-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.second {
+    color: var(--secondary-text-color);
+}
+.text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.text-small {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.37;
+  text-transform: uppercase;
+}
+.text-mid {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.nodots {
+  list-style: none;
+}
+/* header */
+.header {
+  background-color: #303030;
+}
+.nav .link,
+.phone.link {
+  color: var(--addaccent-text-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+.phone {
+  text-transform: uppercase;
+}
+.nav .link:hover,
+.nav .link:focus {
+  color: #ff6c00;
+}
+.phone.link:hover,
+.phone.link:focus {
+  color: #ff6c00;
+}
+/* hero */
+.hero {
+  background-color: #303030;
+}
+.hero .link {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36x;
+  letter-spacing: 0.2em;
+}
+.hero .link:hover,
+.hero .link:hover {
+  color: #ff6c00;
+}
+.hero .title {
+  font-family: "Raleway", sans-serif;
+  color: var(--addaccent-text-color);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+.hero .text {
+  color: var(--addpri-text-color);
+}
+.hero .text-small {
+  color: var(--addsec-text-color);
+}
+/* about */
+.section .title {
+  font-family: "Raleway";
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
+
+.section .text,
+.section .text-mid {
+  color: var(--primary-text-color);
+}
+.section .text-small {
+  color: var(--secondary-text-color);
+}
