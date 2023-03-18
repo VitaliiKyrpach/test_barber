@@ -10,116 +10,204 @@
   --addsec-text-color: rgba(157, 164, 189, 0.6);
   --accent-text-color: #ff6c00;
   --addaccent-text-color: #ffffff;
+  --primary-background: #ffffff;
+  --secondary-background: #000000;
+  --third-background: #f7f7f7;
+  --prices-background: rgba(9, 11, 19, 0.2);
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
   color: var(--primary-text-color);
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
 }
-.button {
-  color: var(--addaccent-text-color);
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: transparent;
-}
-.second {
-    color: var(--secondary-text-color);
-}
-.text {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-}
-.text-small {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.37;
-  text-transform: uppercase;
-}
-.text-mid {
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: 0.02em;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .nodots {
   list-style: none;
 }
-/* header */
-.header {
-  background-color: #303030;
+.noline {
+  text-decoration: none;
 }
-.nav .link,
-.phone.link {
+
+/* ------------------------header------------------------ */
+.header {
+  background-color: #191c26;
+}
+.nav-link {
   color: var(--addaccent-text-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
 }
+.nav-link:hover,
+.nav-link:focus,
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-text-color);
+}
 .phone {
   text-transform: uppercase;
 }
-.nav .link:hover,
-.nav .link:focus {
-  color: #ff6c00;
+.button {
+  font-family: "Open Sans", sans-serif;
+  color: var(--addaccent-text-color);
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-.phone.link:hover,
-.phone.link:focus {
-  color: #ff6c00;
+.button:hover,
+.button:focus {
+  background-color: var(--accent-text-color);
 }
-/* hero */
+/* --------------------hero--------------------- */
 .hero {
-  background-color: #303030;
+  background-color: #191c26;
 }
-.hero .link {
+.hero-link {
   color: var(--secondary-text-color);
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.36x;
+  line-height: 1.36;
   letter-spacing: 0.2em;
 }
-.hero .link:hover,
-.hero .link:hover {
-  color: #ff6c00;
-}
-.hero .title {
-  font-family: "Raleway", sans-serif;
-  color: var(--addaccent-text-color);
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
-  letter-spacing: 0.05em;
+.hero .small-text {
+  color: var(--addsec-text-color);
 }
 .hero .text {
   color: var(--addpri-text-color);
 }
-.hero .text-small {
-  color: var(--addsec-text-color);
-}
-/* about */
-.section .title {
-  font-family: "Raleway";
-  color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  color: var(--addaccent-text-color);
+  font-size: 72px;
+  line-height: 1.18;
   letter-spacing: 0.05em;
 }
-
-.section .text,
-.section .text-mid {
-  color: var(--primary-text-color);
-}
-.section .text-small {
+/* -------------------section-------------------- */
+.small-text {
   color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.title {
+  color: var(--secondary-text-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.middle-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+.button.secondary {
+  color: var(--secondary-text-color);
+}
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--addaccent-text-color);
+}
+/* ----------------------prices----------------------- */
+.prices {
+  background-color: #191c26;
+}
+.prices .small-text {
+  color: var(--addsec-text-color);
+}
+.prices .title {
+  color: var(--addaccent-text-color);
+}
+.prices .text {
+  color: var(--addpri-text-color);
+}
+.list {
+  background-color: rgba(23, 26, 36, 0.2);
+}
+.list.nodots {
+  background-color: rgba(9, 11, 19, 0.2);
+}
+/* -------------------------advantages--------------------------- */
+.title.transform {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.36;
+}
+.small-text.transform {
+  text-align: center;
+  text-transform: none;
+}
+/* -------------------------team--------------------------- */
+.team {
+  background-color: var(--third-background);
+}
+.name {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  line-height: 1.39;
+  text-align: center;
+}
+.text-job {
+  color: var(--accent-text-color);
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.socials:hover,
+.socials:focus {
+  background-color: var(--accent-text-color);
+}
+/* -------------------------booking&contacts--------------------------- */
+.booking,
+.contacts {
+  background-color: #191c26;
+}
+.booking .title,
+.contacts .title {
+  color: var(--addaccent-text-color);
+}
+
+.form .small-text {
+  background-color: transparent;
+  cursor: pointer;
+}
+.contacts .text {
+  color: var(--addpri-text-color);
+  font-style: normal;
+}
+.bold {
+  font-weight: 700;
+}
+.contacts .small-text {
+  color: var(--addaccent-text-color);
+}
+/* -------------------------footer--------------------------- */
+.footer .small-text {
+  color: var(--addpri-text-color);
+  text-transform: none;
+}
+.footer-link {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-text-color);
 }
