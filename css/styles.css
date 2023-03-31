@@ -125,8 +125,11 @@ img {
   width: 100px;
 }
 .hero .content {
-  background-color: #191c26;
-  padding: 152px 526px 208px 100px;
+  padding: 184px 526px 208px 100px;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../img/heroBG.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-link {
   color: var(--secondary-text-color);
@@ -138,6 +141,13 @@ img {
 .hero .small-text {
   color: var(--addsec-text-color);
   margin-bottom: 20px;
+}
+.line::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  margin-right: 20px;
 }
 .hero .text {
   color: var(--addpri-text-color);
@@ -157,6 +167,8 @@ img {
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 .text {
   font-size: 18px;
@@ -210,7 +222,14 @@ img {
 
 /* ----------------------prices----------------------- */
 .prices {
-  background-color: #191c26;
+  max-width: 1600px;
+  background-image: url(../img/pricesBG.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #111319;
+  display: block;
+  margin: 0 auto;
 }
 .prices .container {
   padding-top: 120px;
@@ -221,6 +240,12 @@ img {
   gap: 30px;
   margin-bottom: 42px;
 }
+.prices .content:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.prices .content:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
 .prices .list {
   width: calc((100% - 30px) / 2);
   padding: 30px 20px;
@@ -228,11 +253,20 @@ img {
 }
 .prices .item {
   display: flex;
+  align-items: baseline;
+  gap: 12px;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 .prices .item:last-child {
   margin-bottom: 0;
+}
+.prices .item::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
 }
 .prices .small-text {
   color: var(--addsec-text-color);
@@ -244,6 +278,10 @@ img {
 }
 .prices .text {
   color: var(--addpri-text-color);
+  display: flex;
+}
+.prices .text:first-child {
+  order: -1;
 }
 .prices .button {
   display: block;
@@ -260,7 +298,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   max-width: 370px;
-  gap: 30px;
+  flex-shrink: 0;
 }
 .advantages .item {
   padding: 20px 24px;
@@ -268,6 +306,12 @@ img {
   width: 170px;
   height: 133px;
   text-align: center;
+}
+.advantages .item:nth-child(odd) {
+  margin-right: 30px;
+}
+.advantages .item:nth-child(even) {
+  margin-top: 30px;
 }
 .adv-content {
   padding-top: 9px;
@@ -286,6 +330,15 @@ img {
   font-weight: 700;
   line-height: 1.36;
   margin-bottom: 6px;
+}
+.title.transform::after {
+  content: "+";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.37;
+  text-align: center;
+  color: transparent;
+  text-shadow: 0px -20px 0 #ff6c00;
 }
 .small-text.transform {
   text-align: center;
@@ -341,6 +394,27 @@ img {
 .links:focus {
   background-color: var(--accent-text-color);
 }
+.soc-item {
+  width: 44px;
+  height: 44px;
+}
+.soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: rgba(48, 48, 48, 1);
+}
+.icon {
+  fill: currentColor;
+}
+.soc-link:hover,
+.cos-link:focus {
+  color: #ff6c00;
+}
 /* -------------------------examples--------------------------- */
 .examples .container {
   padding-top: 120px;
@@ -358,15 +432,22 @@ img {
 }
 /* -------------------------booking&contacts--------------------------- */
 .last-sec {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: url(../img/contactsBG.png);
+  background-repeat: no-repeat;
+  background-size: 785px;
+  background-position: right;
   background-color: #191c26;
-}
-.last-sec .container {
   padding-top: 130px;
   padding-bottom: 120px;
+}
+.last-sec .container {
   display: flex;
 }
 .booking {
   width: 600px;
+  padding-right: 30px;
 }
 .contacts {
   padding-left: 100px;
@@ -381,6 +462,10 @@ img {
 .contacts .title {
   margin-bottom: 40px;
 }
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
 .form .small-text {
   background-color: transparent;
   cursor: pointer;
@@ -388,10 +473,25 @@ img {
   border: none;
   border-bottom: 1px solid;
 }
+.area {
+  width: 100%;
+  resize: none;
+}
 .clname,
 .clphone {
-  width: 267px;
+  padding: 0;
+  width: 270px;
+}
+.clname {
   margin-right: 30px;
+}
+.form .small-text:hover {
+  border-color: #ffffff;
+}
+
+:hover::placeholder,
+:focus::placeholder {
+  color: #ffffff;
 }
 .btn {
   display: block;
