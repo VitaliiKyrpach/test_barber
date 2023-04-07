@@ -30,17 +30,19 @@
           </ul>
         </nav>
         <a class="nav-link phone noline" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="button" type="button">Online-booking</button>
+        <button class="button" data-modal-open type="button">Online-booking</button>
       </div>
     </header>
     <main>
       <!-- hero -->
       <section class="hero">
         <div class="container">
-          <ul class="sidebar list">
-            <li><a class="hero-link noline" href="" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></li>
-            <li><a class="hero-link noline" href="" target="_blank" rel="noopener noreferrer nofollow">Youtube</a></li>
-          </ul>
+          <div class="sidebar-wrap">
+            <ul class="sidebar list">
+              <li><a class="hero-link noline" href="" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></li>
+              <li><a class="hero-link noline" href="" target="_blank" rel="noopener noreferrer nofollow">Youtube</a></li>
+            </ul>
+          </div>
           <div class="content">
             <p class="small-text line">A hair salon for men in Kyiv</p>
             <h1 class="hero-title">BarberShop</h1>
@@ -63,7 +65,7 @@
               We are a team that never stops at what has been achieved and are thirsty for changes. And when you fall into the hands of our master, you will never be the same again. We are a team that
               is always "on the same wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
             </p>
-            <button class="button secondary" type="button">Online-booking</button>
+            <button class="button secondary" data-modal-open type="button">Online-booking</button>
           </div>
         </div>
       </section>
@@ -110,7 +112,7 @@
               </li>
             </ul>
           </div>
-          <button class="button" type="button">Online-booking</button>
+          <button class="button" data-modal-open type="button">Online-booking</button>
         </div>
       </section>
       <!-- advantages -->
@@ -148,7 +150,10 @@
           <h2 class="title">Our barbers</h2>
           <ul class="team-list list">
             <li class="cards">
-              <img class="pic" src="./img/barb1.jpg" alt="John Smith" width="370" height="346" />
+              <div class="overlay">
+                <img class="pic" src="./img/barb1.jpg" alt="John Smith" width="370" height="346" />
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum harum quae nihil perferendis.</p>
+              </div>
               <h3 class="text name">John Smith</h3>
               <p class="text-job">Extreme Barber</p>
               <ul class="socials list">
@@ -183,7 +188,10 @@
               </ul>
             </li>
             <li class="cards">
-              <img class="pic" src="./img/barb2.jpg" alt="Michele Doe" width="370" height="346" />
+              <div class="overlay">
+                <img class="pic" src="./img/barb2.jpg" alt="Michele Doe" width="370" height="346" />
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum harum quae nihil perferendis.</p>
+              </div>
               <h3 class="text name">Michele Doe</h3>
               <p class="text-job">Extreme Barber</p>
               <ul class="socials list">
@@ -218,7 +226,10 @@
               </ul>
             </li>
             <li class="cards">
-              <img class="pic" src="./img/barb3.jpg" alt="Alan Black" width="370" height="346" />
+              <div class="overlay">
+                <img class="pic" src="./img/barb3.jpg" alt="Alan Black" width="370" height="346" />
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum harum quae nihil perferendis.</p>
+              </div>
               <h3 class="text name">Alan Black</h3>
               <p class="text-job">Extreme Barber</p>
               <ul class="socials list">
@@ -311,5 +322,11 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close type="button">X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
