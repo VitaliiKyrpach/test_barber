@@ -615,8 +615,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 350px;
-  height: 500px;
+  width: 408px;
+  padding: 72px 24px 24px;
   background-color: #ffffff;
   border-radius: 10px;
   transition: transform 300ms linear;
@@ -625,18 +625,147 @@ img {
   transform: translate(-50%, -50%) scale(0);
 }
 .modal-btn {
-  display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   border: 1px solid black;
   border-radius: 50%;
   background-color: rgb(205, 205, 205);
+  color: var(--secondary-background);
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.modal-btn .icon {
+  fill: currentColor;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--accent-text-color);
+  color: white;
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal .title {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 34px;
+}
+.mod-label {
+  position: relative;
+  margin-bottom: 26px;
+}
+.label-name {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 38px;
+  font-size: 12px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.mod-input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid var(--secondary-background);
+  border-radius: 4px;
+  padding: 11px 11px 11px 38px;
+  outline: none;
+  transition: border-color 250ms linear;
+}
+
+.mod-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: color 250ms linear;
+}
+.mod-label:focus-within .mod-icon,
+.mod-input:not(:placeholder-shown) ~ .mod-icon {
+  fill: var(--accent-text-color);
+}
+
+.mod-input:focus,
+.mod-input:not(:placeholder-shown) {
+  border-color: var(--accent-text-color);
+}
+.mod-input:focus + .label-name,
+.mod-input:not(:placeholder-shown) + .label-name {
+  transform: translate(-38px, -38px);
+}
+.area-label {
+  position: relative;
+}
+.area-input {
+  width: 360px;
+  height: 120px;
+  resize: none;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border: 1px solid var(--secondary-background);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms linear;
+}
+.area-input:focus,
+.area-input:not(:placeholder-shown) {
+  border-color: var(--accent-text-color);
+}
+.area-name {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+}
+.textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  color: transparent;
+}
+.check .icon {
+  fill: currentColor;
+}
+.check-input:checked + .check-label .check {
+  color: black;
+  background-color: var(--accent-text-color);
+}
+.check-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+.modal-link {
+  color: rgba(77, 90, 229, 1);
+}
+.checkbox {
+  margin-bottom: 24px;
+}
+.form .button.secondary {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
