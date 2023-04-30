@@ -46,7 +46,7 @@
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero .content {
-      background-image: url(../img/heroBG_tab_2x.png);
+      background-image: url(../img/heroBG_tab_2x.jpg);
     }
   }
   .prices .text {
@@ -212,7 +212,7 @@
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero .content {
-      background-image: url(../img/heroBG_2x.png);
+      background-image: url(../img/heroBG_2x.jpg);
     }
   }
   .sidebar-wrap {
